@@ -167,12 +167,12 @@ For parents: Share a time YOU stayed loyal to someone — or walked away. Let yo
     'karna-scene-8.png', '12'
   );
 
-  -- Scene 9 — The Seal (no image)
+  -- Scene 9 — The Seal
   INSERT INTO scenes (story_id, "order", scene_type, title, narration, image_filename, age_group)
   VALUES (
     story_uuid, 9, 'seal', 'The Seal',
-    'Karna teaches us: gratitude is powerful, but loyalty should not make us close our eyes. Be grateful — and choose your circle with wisdom.',
-    NULL, '12'
+    'Gratitude is noble. Loyalty needs wisdom.',
+    'karna-scene-9-seal.png', '12'
   );
 
 END $$;
