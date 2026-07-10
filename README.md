@@ -96,11 +96,45 @@ Don't invent them.
 
 ### Existing stories
 
-| Slug             | Seed file                                | Notes |
-|------------------|------------------------------------------|-------|
-| `birds-eye-test` | `backend/seed_scenes.sql`                | First story; also in `supabase_migration.sql` |
-| `karnas-loyalty` | `backend/seed_scenes_karnas_loyalty.sql` | Has `reflection_questions` (see `backend/add_reflection_questions_karnas_loyalty.sql`) |
-| `eklavyas-thumb` | `backend/seed_scenes_eklavyas_thumb.sql` | Canonical template for new stories |
+#### 1. The Bird's Eye Test — `birds-eye-test`
+
+- **Lesson:** Focus on your goal, not the distractions around it.
+- **Seed:** `backend/seed_scenes.sql` (story row itself is created by `supabase_migration.sql`)
+- **Images:** `frontend/public/images/birds-eye-test/` — `scene-01.png` … `scene-06.png`, `scene-07-seal.png`
+- **Scenes (7):** all narration except the seal — The Forest Classroom · The Announcement ·
+  The Parrot on the Branch · The Question · Only Arjuna Remained · The Lesson · The Seal.
+  No interactive scene (predates that pattern).
+
+#### 2. Karna's Loyalty — `karnas-loyalty`
+
+- **Lesson:** Choose your circle wisely
+- **Seed:** `backend/seed_scenes_karnas_loyalty.sql`
+- **Images:** `frontend/public/images/karnas-loyalty/` — `karna-scene-1.png` … `karna-scene-8.png`,
+  `karna-scene-9-seal.png`, plus a duplicate `scene-01.png` added only to satisfy the
+  Library cover convention (see above; newer stories avoid the duplicate by naming
+  scene 1's file `scene-01.png` in the first place)
+- **Scenes (9):** 7 narration (The River Child · The Tournament · The Gift of a Kingdom ·
+  What Karna Knows · Krishna Comes · The Answer · The Field of Kurukshetra),
+  1 interactive (The Pause, **with** an image — unusual), 1 seal
+- **Extra:** has `reflection_questions` (4 questions) set by
+  `backend/add_reflection_questions_karnas_loyalty.sql`, which enables the app's
+  "Reflect" screen after the last scene
+
+#### 3. Eklavya's Thumb — `eklavyas-thumb`
+
+- **Lesson:** Your talent is yours — no one can take it unless you let them.
+- **Seed:** `backend/seed_scenes_eklavyas_thumb.sql` — **canonical template for new stories**
+- **Images:** `frontend/public/images/eklavyas-thumb/` — `scene-01.png`,
+  `eklavya-scene-2.png` … `eklavya-scene-7.png` (7 files; the interactive and seal
+  scenes have no image)
+- **Scenes (9):** 6 narration (The Boy Who Taught Himself · Better Than the Best ·
+  The Unfair Price · What Was Really Lost · It Happens Today Too · The Question),
+  1 interactive (What Would You Do?, no image), 1 closing narration
+  (Eklavya's Real Legacy, uses `eklavya-scene-7.png`), 1 seal (no image)
+- **No `reflection_questions` yet** — the interactive scene carries the reflection
+  content inline instead
+- **Status note:** a replacement for `eklavya-scene-4.png` (hand without visible
+  thumb) may arrive later; swap the file, keep the filename
 
 ---
 
