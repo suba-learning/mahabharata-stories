@@ -51,9 +51,7 @@ export default function StoryPage() {
     )
   }
 
-  const hasQuestions = Array.isArray(story.reflection_questions) && story.reflection_questions.length > 0
-
-  if (reflecting && hasQuestions) {
+  if (reflecting) {
     return (
       <ReflectionScreen
         story={story}
@@ -73,7 +71,7 @@ export default function StoryPage() {
       totalScenes={scenes.length}
       onNext={() => setCurrentIndex(i => i + 1)}
       onPrev={() => setCurrentIndex(i => i - 1)}
-      onFinish={hasQuestions ? () => setReflecting(true) : null}
+      onFinish={() => setReflecting(true)}
     />
   )
 }
